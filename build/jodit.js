@@ -1,7 +1,7 @@
 /*!
  * jodit - Jodit is awesome and usefully wysiwyg editor with filebrowser
  * Author: Chupurnov <chupurnov@gmail.com> (https://xdsoft.net/)
- * Version: v3.7.1
+ * Version: v3.7.2
  * Url: https://xdsoft.net/jodit/
  * License(s): MIT
  */
@@ -10868,7 +10868,7 @@ var View = (function (_super) {
         _this.isView = true;
         _this.mods = {};
         _this.components = new Set();
-        _this.version = "3.7.1";
+        _this.version = "3.7.2";
         _this.async = new async_1.Async();
         _this.buffer = storage_1.Storage.makeStorage();
         _this.storage = storage_1.Storage.makeStorage(true, _this.componentName);
@@ -11010,10 +11010,10 @@ var View = (function (_super) {
         configurable: true
     });
     View.prototype.getVersion = function () {
-        return "3.7.1";
+        return "3.7.2";
     };
     View.getVersion = function () {
-        return "3.7.1";
+        return "3.7.2";
     };
     View.prototype.initOptions = function (options) {
         this.options = helpers_1.ConfigProto(options || {}, helpers_1.ConfigProto(this.options || {}, View.defaultOptions));
@@ -12725,8 +12725,7 @@ config_1.Config.prototype.filebrowser = {
     },
     ajax: tslib_1.__assign(tslib_1.__assign({}, config_1.Config.prototype.defaultAjaxOptions), { url: '', async: true, data: {}, cache: true, contentType: 'application/x-www-form-urlencoded; charset=UTF-8', method: 'POST', processData: true, dataType: 'json', headers: {}, prepareData: function (data) {
             return data;
-        },
-        process: function (resp) {
+        }, process: function (resp) {
             return resp;
         } }),
     create: {
